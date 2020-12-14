@@ -53,6 +53,7 @@ function distance_calculate(){
 
 //Distanz wird alle 5 Sekunden berechnet, End Button wird bereit gestellt
 function  distance_measure(){
+  background(0);
   intervalCurrentPosition(positionPing, 5000);
  distance_button.remove();
 //End Button wird erzeugt
