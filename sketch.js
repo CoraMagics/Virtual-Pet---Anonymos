@@ -82,7 +82,7 @@ function show_distance() {
   loadImage('black.png', img3 => {
     image(img3, 0, windowHeight / 2 + 370, windowWidth, 100);
   });
-  round();
+  roundThis();
   //text ausgabe
   textSize(30);
   fill(255);
@@ -106,8 +106,8 @@ function show_distance() {
 let n = 100;
 let rounded = 0;
 
-function round() {
-  rounded = (Math.round(dist), n);
+function roundThis() {
+  rounded = round(dist, 2);
 }
 
 let listimg;
