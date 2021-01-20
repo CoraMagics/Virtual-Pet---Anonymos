@@ -27,6 +27,7 @@ let lat2 = 0; // Latitude von 2. Spielerposition
 let long2 = 0; // Longitude von 2. Spielerposition
 var database; // db ref
 let egg = true;
+let end = false;
 
 let dist = 0.0; // Distanzvariable
 
@@ -62,6 +63,7 @@ function distance_measure() {
   });
   dist = 0;
   intervalCurrentPosition(positionPing, 5000);
+  end = true;
   distance_button.remove();
   //End Button wird erzeugt
   end_button = createButton("end walk");
@@ -80,7 +82,7 @@ function show_distance() {
   loadImage('black.png', img3 => {
     image(img3, 0, windowHeight / 2 + 370, windowWidth, 100);
   });
-  round()
+  round();
   //text ausgabe
   textSize(30);
   fill(255);
@@ -191,7 +193,9 @@ function walk() {
 
 function goingBack() {
   distance_button.remove();
-  end_button.remove();
+  if (end == true) {
+    end_button.remove();
+  }
   goBack.remove();
   setup();
 }
