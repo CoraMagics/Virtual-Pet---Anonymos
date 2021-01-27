@@ -197,7 +197,7 @@ function main() {
       gif_pet = createImg('idle_purple_green.gif');
       gif_pet.position(windowWidth / 2.7, 140);
       console.log(windowWidth + ' ' + windowHeight);
-      gif_pet.size(413 / windowWidth * 1920, 705 / windowWidth * 1920);
+      gif_pet.size(413 / 1920 * windowWidth, 705 / 1920 * windowWidth);
     }
     if (hunger > 60) {
       gif_pet = createImg('pet_purple_green_chubby.png');
