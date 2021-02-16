@@ -170,6 +170,11 @@ function checkCookie_Looks() {
   }
 }
 
+function checkCookie_Name() {
+  var this_user = getCookie("petname");
+  petName = this_user;
+}
+
 function checkCookie_Hunger() {
   var this_user = getCookie("hunger");
   if (this_user == 0) {
@@ -409,7 +414,6 @@ function main() {
   }
 
   checkCookie_Hunger();
-  console.log(hunger);
 
   createPet();
 
@@ -680,8 +684,13 @@ function createPet() {
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
-    if (hunger > 60) {
-      gif_pet = createImg('pet_purple_green_chubby.png');
+    if (hunger > 60 && hunger < 90) {
+      gif_pet = createImg('chubby_idle_purple_green.gif');
+      gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
+      gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
+    }
+    if (hunger > 80) {
+      gif_pet = createImg('fat_idle_purple_green.gif');
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
@@ -692,8 +701,13 @@ function createPet() {
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
-    if (hunger > 60) {
-      gif_pet = createImg('pet_purple_red_chubby.png');
+    if (hunger > 60 && hunger < 90) {
+      gif_pet = createImg('chubby_idle_purple_red.gif');
+      gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
+      gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
+    }
+    if (hunger > 80) {
+      gif_pet = createImg('fat_idle_purple_red.gif');
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
@@ -704,8 +718,13 @@ function createPet() {
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
-    if (hunger > 60) {
-      gif_pet = createImg('pet_blue_green_chubby.png');
+    if (hunger > 60 && hunger < 90) {
+      gif_pet = createImg('chubby_idle_blue_green.gif');
+      gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
+      gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
+    }
+    if (hunger > 80) {
+      gif_pet = createImg('fat_idle_blue_green.gif');
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
@@ -716,8 +735,13 @@ function createPet() {
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
-    if (hunger > 60) {
-      gif_pet = createImg('pet_blue_red_chubby.png');
+    if (hunger > 60 && hunger < 90) {
+      gif_pet = createImg('chubby_idle_blue_red.gif');
+      gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
+      gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
+    }
+    if (hunger > 80) {
+      gif_pet = createImg('fat_idle_blue_red.gif');
       gif_pet.position(windowWidth / 2 - (553.0 / 915.0 * petResizeHeight() / 2), windowHeight / 2 - (petResizeHeight() / 2));
       gif_pet.size(553.0 / 915.0 * petResizeHeight(), petResizeHeight());
     }
